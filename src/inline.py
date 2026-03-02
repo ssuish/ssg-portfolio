@@ -63,22 +63,14 @@ def split_nodes_delimiter(old_nodes, delimiter, text_type):
 
 def extract_markdown_images(text):
     pattern = r"!\[([^\]]*)\]\(([^)]*)\)"
-    matches = re.finditer(pattern, text)
-
-    if not matches:
-        return ()
-
-    return [match.groups() for match in matches]
+    matches = re.findall(pattern, text)
+    return matches if matches else ()
 
 
 def extract_markdown_links(text):
     pattern = r"(?<!!)\[([^\]]*)\]\(([^)]*)\)"
-    matches = re.finditer(pattern, text)
-
-    if not matches:
-        return ()
-
-    return [match.groups() for match in matches]
+    matches = re.findall(pattern, text) 
+    return matches if matches else ()
 
 
 def split_nodes_image(old_nodes):
