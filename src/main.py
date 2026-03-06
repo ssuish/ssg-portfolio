@@ -1,6 +1,5 @@
 import os
 import shutil
-from textnode import TextNode, TextType
 
 
 def copy_files(source_dir, dest_dir):
