@@ -81,7 +81,7 @@ def ordered_list_to_html_node(block):
     i = 1
     for line in lines:
         li = line.split(f"{i}. ")
-        li_node = ParentNode(tag="li", children=text_to_children(li))
+        li_node = ParentNode(tag="li", children=text_to_children(li[1]))
         li_nodes.append(li_node)
 
         i += 1
@@ -94,7 +94,7 @@ def unordered_list_to_html_node(block):
     li_nodes = []
 
     for line in lines:
-        li = line.split("- ")
+        li = line[2:]
         li_node = ParentNode(tag="li", children=text_to_children(li))
         li_nodes.append(li_node)
 
@@ -123,7 +123,7 @@ def block_to_html_node(block, block_type):
         return ParentNode(tag="p", children=leaf_nodes)
 
     if block_type == BlockType.HEADING:
-        return ParentNode(tag=calculate_heading_hierarchy(block), children=leaf_nodes)
+        return ParentNode(tag=f"h{calculate_heading_hierarchy(block)}", children=leaf_nodes)
 
     if block_type == BlockType.ORDERED_LIST:
         return ordered_list_to_html_node(block)
