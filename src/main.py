@@ -28,9 +28,28 @@ def static_to_public():
     copy_files(static_dir_abs, public_dir_abs)
 
 
+def generate_page_recursive(from_dir, template, dest_dir):
+    for fp in os.listdir(from_dir):
+        from_path = os.path.join(from_dir, fp)
+        dest_path = os.path.join(dest_dir, fp)
+
+        if os.path.isfile(from_path):
+            new_dest = dest_path.replace(".md", ".html")
+            generate_page(from_path, template, new_dest)
+        else:
+            generate_page_recursive(from_path, template, dest_path)
+
 def main():
+    public_dir_abs = os.path.abspath("./public")
+    dir_path_content = os.path.abspath("./content")
+    template_path = os.path.abspath("./template.html")
+
     static_to_public()
-    generate_page('content/index.md', 'template.html', 'public/index.html')
+    generate_page_recursive(
+        dir_path_content,
+        template_path,
+        public_dir_abs,
+    )
 
 
 if __name__ == "__main__":
