@@ -10,7 +10,7 @@ def extract_title(md):
     raise ValueError("There's no title")
 
 
-def generate_page_recursive(from_dir, template, dest_dir, basepath):
+def generate_page_recursive(from_dir, template, dest_dir, basepath="/"):
     for fp in os.listdir(from_dir):
         from_path = os.path.join(from_dir, fp)
         dest_path = os.path.join(dest_dir, fp)
@@ -22,7 +22,7 @@ def generate_page_recursive(from_dir, template, dest_dir, basepath):
             generate_page_recursive(from_path, template, dest_path, basepath)
 
 
-def generate_page(from_path, template_path, dest_path, basepath):
+def generate_page(from_path, template_path, dest_path, basepath="/"):
     print(f"Generating page from {from_path} to {dest_path} using {template_path}")
     md = None
     template = None
