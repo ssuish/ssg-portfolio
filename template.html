@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -9,7 +9,38 @@
 </head>
 
 <body>
-    <article>{{ Content }}</article>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Primary">
+            <a class="brand" href="/">ssuish</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/projects/">Projects</a>
+                <a href="/blog/">Blog</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="site-main">
+        <article class="content">{{ Content }}</article>
+    </main>
+
+    <footer class="site-footer">
+        <small>© 2026 ssuish (●'◡'●)</small>
+        <small>All Rights Reserved.</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+        integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+        integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"
+        integrity="sha384-o0gqi06am9fKVfa/jWO8/UE7OxHG6t+fgq/XaASsuwT8OBsFcxN7YhjtqyTfIxtS"
+        crossorigin="anonymous"></script>
+    <script src="/image-polish.js" defer></script>
 </body>
 
 </html>
