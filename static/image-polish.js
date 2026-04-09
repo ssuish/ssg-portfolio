@@ -38,9 +38,13 @@ function initImagePolish(article, prefersReduced) {
         markReady();
       } else {
         img.addEventListener("load", markReady, { once: true });
-        img.addEventListener("error", () => img.classList.remove("img-loading"), {
-          once: true,
-        });
+        img.addEventListener(
+          "error",
+          () => img.classList.remove("img-loading"),
+          {
+            once: true,
+          },
+        );
       }
     }
 
@@ -136,4 +140,6 @@ function initGSAP(article) {
         stagger: 0.04,
       }),
   });
+
+  ScrollTrigger.refresh();
 }
