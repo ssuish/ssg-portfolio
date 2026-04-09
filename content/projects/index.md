@@ -2,17 +2,20 @@
 
 [< Back Home](/)
 
-Here are a few projects and templates that represent the kind of work I do. Each project page includes a short overview, stack, and key highlights.
+Each project below includes a short **elevator pitch**, **tech stack**, and **skills demonstrated**—follow the link for the full story.
 
-## Featured Projects
+## Featured projects
 
-- [Static Site Portfolio Generator](/projects/ssg-portfolio/)
-- [Sample Application Template](/projects/sample-app/)
-- [Open Source Contributions](/projects/open-source/)
+### [Static Site Portfolio Generator](/projects/ssg-portfolio/)
 
-## How to Use This Section
+![Sample preview for Static Site Portfolio Generator](/images/projects/ssg-portfolio-preview.png)
 
-- Treat these entries as **boilerplate**.
-- Replace or expand them with your own real projects over time.
-- Keep each project page focused and scannable.
+**Elevator pitch:** A custom Python static site generator turns Markdown under `/content` into a deployable site you fully own—simple content model, no heavy framework, easy to extend and ship (for example to GitHub Pages).
+
+**Tech stack:** Python, Markdown, HTML templates, GitHub Actions, static assets (CSS/JS), GSAP for light page polish.
+
+**Skills demonstrated:** Recursive site generation, Markdown-to-HTML pipeline, template composition, content-driven information architecture, CI/CD for static deploys.
+
+## Other projects
+
 
