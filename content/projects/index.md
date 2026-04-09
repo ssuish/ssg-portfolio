@@ -1,8 +1,8 @@
 # Projects
 
-[< Back Home](/)
+[<- Back Home](/)
 
-Each project below includes a short **elevator pitch**, **tech stack**, and **skills demonstrated**—follow the link for the full story.
+Each project below includes a short **elevator pitch**, **tech stack**, and **skills demonstrated** follow the link for the full story.
 
 ## Featured projects
 
