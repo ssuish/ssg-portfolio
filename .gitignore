@@ -6,7 +6,7 @@ dist/
 wheels/
 *.egg-info
 
-# Custoom ignores
+# Custom ignores
 templates/
 
 # Virtual environments
