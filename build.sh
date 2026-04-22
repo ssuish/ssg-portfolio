@@ -1,1 +1,1 @@
-python3 src/main.py "/ssuish-portfolio/"
+python3 src/main.py "/ssuish-portfolio-ssg/"
